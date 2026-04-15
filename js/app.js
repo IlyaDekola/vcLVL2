@@ -65,6 +65,11 @@ function buildPopupContent(event) {
       ? event.sources.join(", ")
       : null;
 
+  const hasValidUrl =
+    typeof event.url === "string" &&
+    event.url.trim() !== "" &&
+    !event.url.includes("example.com");
+
   return `
     <div class="popup-card">
       <div class="popup-toprow">
@@ -77,10 +82,10 @@ function buildPopupContent(event) {
       <h3 class="popup-title">${event.title}</h3>
 
       <p class="popup-venue">
-        <span class="popup-icon">📍</span>${event.venue}
+        <span class="popup-icon">📍</span>${event.venue || "Локация уточняется"}
       </p>
       <p class="popup-time">
-        <span class="popup-icon">⏰</span>${event.time}
+        <span class="popup-icon">⏰</span>${event.time || "Время уточняется"}
       </p>
 
       ${
@@ -99,7 +104,7 @@ function buildPopupContent(event) {
       }
 
       ${
-        event.url
+        hasValidUrl
           ? `<a class="popup-link" href="${event.url}" target="_blank" rel="noopener noreferrer">
                Подробнее и билеты
              </a>`
@@ -109,26 +114,66 @@ function buildPopupContent(event) {
   `;
 }
 
+function groupEventsByCoordinates(events) {
+  const groups = new Map();
+
+  events.forEach((event) => {
+    if (typeof event.lat !== "number" || typeof event.lng !== "number") return;
+
+    const key = `${event.lat.toFixed(6)}:${event.lng.toFixed(6)}`;
+
+    if (!groups.has(key)) {
+      groups.set(key, []);
+    }
+
+    groups.get(key).push(event);
+  });
+
+  return groups;
+}
+
+function getJitteredLatLng(event, index, totalInGroup) {
+  if (totalInGroup <= 1) {
+    return [event.lat, event.lng];
+  }
+
+  const angle = (Math.PI * 2 * index) / totalInGroup;
+
+  // был 0.0012 → делаем разброс на порядок меньше
+  const radius = 0.00015; // ~10–15 м по карте, в зависимости от широты
+
+  const latOffset = Math.sin(angle) * radius;
+  const lngOffset = Math.cos(angle) * radius;
+
+  return [event.lat + latOffset, event.lng + lngOffset];
+}
+
 function renderMarkers(events) {
   if (!markersLayer) return;
 
   markersLayer.clearLayers();
 
-  events.forEach((event) => {
-    if (typeof event.lat !== "number" || typeof event.lng !== "number") return;
+  const groups = groupEventsByCoordinates(events);
 
-    const meta = getCategoryMeta(event.category);
+  groups.forEach((groupEvents) => {
+    groupEvents.forEach((event, index) => {
+      const meta = getCategoryMeta(event.category);
+      const [lat, lng] = getJitteredLatLng(event, index, groupEvents.length);
 
-    const marker = L.circleMarker([event.lat, event.lng], {
-      radius: 11,
-      color: "#ffffff",
-      weight: 3,
-      fillColor: meta.color,
-      fillOpacity: 0.95
+      const marker = L.circleMarker([lat, lng], {
+        radius: 11,
+        color: "#ffffff",
+        weight: 3,
+        fillColor: meta.color,
+        fillOpacity: 0.95
+      });
+
+      marker.bindPopup(buildPopupContent(event), {
+        maxWidth: 320
+      });
+
+      marker.addTo(markersLayer);
     });
-
-    marker.bindPopup(buildPopupContent(event));
-    marker.addTo(markersLayer);
   });
 }
 
