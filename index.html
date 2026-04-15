@@ -3,7 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Minsk Events Map</title>
+    <title>Куда Пойти?</title>
+
+    <link rel="icon" href="data:," />
 
     <link rel="stylesheet" href="./css/tokens.css" />
     <link rel="stylesheet" href="./css/layout.css" />
@@ -17,30 +19,41 @@
     />
   </head>
   <body>
-    <header class="app-header">
-      <div class="container">
-        <h1 class="app-title">Minsk Events Map</h1>
-        <p class="app-subtitle">Интерактивная карта событий Минска</p>
-      </div>
-    </header>
+    <div class="app-shell">
+      <header class="topbar">
+        <div class="topbar-inner">
+          <div class="brand-block">
+            <div class="brand-emoji">🗺️</div>
+            <div class="brand-copy">
+              <h1 class="brand-title">кудапойти?</h1>
+            </div>
+          </div>
 
-    <main class="app-main container">
-      <aside id="filters-panel" class="panel filters-panel">
-        <h2>Фильтры</h2>
-        <div id="filters-content">Фильтры пока не подключены</div>
-      </aside>
+          <div class="filters-row">
+            <div class="filter-group">
+              <div id="date-filters" class="chips-row"></div>
+            </div>
 
-      <section id="events-panel" class="panel events-panel">
-        <h2>События</h2>
-        <div id="stats-bar"></div>
-        <div id="events-content">Загрузка событий...</div>
-      </section>
+            <div class="filter-group">
+              <div id="category-filters" class="chips-row"></div>
+            </div>
+          </div>
 
-      <section id="map-panel" class="panel map-panel">
-        <h2>Карта</h2>
+          <div class="topbar-stats">
+            <span id="found-count">Найдено: 0 событий</span>
+          </div>
+        </div>
+      </header>
+
+      <main class="map-screen">
         <div id="map"></div>
-      </section>
-    </main>
+
+        <aside class="legend-card">
+          <h2 class="legend-title">Категории</h2>
+          <div id="legend-content" class="legend-list"></div>
+        </aside>
+      </main>
+    </div>
 
     <script
       src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
