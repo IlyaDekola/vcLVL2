@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Minsk Events Map</title>
+
+    <link rel="stylesheet" href="./css/tokens.css" />
+    <link rel="stylesheet" href="./css/layout.css" />
+    <link rel="stylesheet" href="./css/components.css" />
+    <link rel="stylesheet" href="./css/themes.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      crossorigin=""
+    />
+  </head>
+  <body>
+    <header class="app-header">
+      <div class="container">
+        <h1 class="app-title">Minsk Events Map</h1>
+        <p class="app-subtitle">Интерактивная карта событий Минска</p>
+      </div>
+    </header>
+
+    <main class="app-main container">
+      <aside id="filters-panel" class="panel filters-panel">
+        <h2>Фильтры</h2>
+        <div id="filters-content">Фильтры пока не подключены</div>
+      </aside>
+
+      <section id="events-panel" class="panel events-panel">
+        <h2>События</h2>
+        <div id="stats-bar"></div>
+        <div id="events-content">Загрузка событий...</div>
+      </section>
+
+      <section id="map-panel" class="panel map-panel">
+        <h2>Карта</h2>
+        <div id="map"></div>
+      </section>
+    </main>
+
+    <script
+      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      crossorigin=""
+    ></script>
+    <script type="module" src="./js/app.js"></script>
+  </body>
+</html>

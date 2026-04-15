@@ -1,0 +1,28 @@
+h2 {
+  margin-top: 0;
+}
+
+.event-item {
+  padding: 12px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.event-item:last-child {
+  border-bottom: none;
+}
+
+.event-title {
+  margin: 0 0 4px;
+  font-weight: 700;
+}
+
+.event-meta {
+  margin: 0;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.stat-line {
+  margin-bottom: 12px;
+  color: var(--muted);
+}

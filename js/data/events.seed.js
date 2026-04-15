@@ -11,7 +11,8 @@ export const EVENTS_SEED = [
     address: "ул. Энгельса, 7",
     lat: 53.9020,
     lng: 27.5617,
-    description: "Грандиозный мюзикл по Дюма. Масштабное шоу — 2 часа страстей, интриг и мести 12+",
+    description:
+      "Грандиозный мюзикл по Дюма. Масштабное шоу — 2 часа страстей, интриг и мести 12+",
     url: "https://bycard.by/afisha/minsk/2026-04-19/5569261",
     sources: ["24afisha.by", "bycard.by"],
     sourceType: "manual",
@@ -21,9 +22,9 @@ export const EVENTS_SEED = [
     isFree: false,
     priceLabel: "от 130 BYN",
     updatedAt: null
-  }
+  },
 
-    {
+  {
     id: "theatre-2026-04-19-002",
     title: "Три супруги совершенства",
     category: "theatre",
@@ -45,10 +46,10 @@ export const EVENTS_SEED = [
     isFree: false,
     priceLabel: "от 17 BYN",
     updatedAt: null
-  }
+  },
 
-    {
-    id: "сinema-2026-04-19-001",
+  {
+    id: "cinema-2026-04-19-001",
     title: "Аватар: Пламя и пепел",
     category: "cinema",
     subcategory: null,
@@ -59,7 +60,8 @@ export const EVENTS_SEED = [
     address: "ул. Бобруйская, 6 (ТРЦ Galileo)",
     lat: 53.9020,
     lng: 27.5617,
-    description: "Третья часть эпоса Кэмерона о народе на'ви. Стихия огня. 2025, США. 8.0/10",
+    description:
+      "Третья часть эпоса Кэмерона о народе на'ви. Стихия огня. 2025, США. 8.0/10",
     url: "https://by.kinoafisha.info/minsk/movies/8329801/",
     sources: ["kinoafisha.info"],
     sourceType: "manual",
@@ -69,9 +71,9 @@ export const EVENTS_SEED = [
     isFree: false,
     priceLabel: "от 30 BYN",
     updatedAt: null
-  }
+  },
 
-    {
+  {
     id: "cinema-2026-04-19-002",
     title: "Проект «Конец света»",
     category: "cinema",
@@ -83,7 +85,8 @@ export const EVENTS_SEED = [
     address: "пр. Независимости, 13",
     lat: 53.9020,
     lng: 27.5617,
-    description: "Райан Гослинг летит в космос спасать Землю. Фантастика, триллер. США 2026. 8.0/10",
+    description:
+      "Райан Гослинг летит в космос спасать Землю. Фантастика, триллер. США 2026. 8.0/10",
     url: "https://by.kinoafisha.info/minsk/movies/8377116/",
     sources: ["kinoafisha.info"],
     sourceType: "manual",
@@ -93,7 +96,7 @@ export const EVENTS_SEED = [
     isFree: false,
     priceLabel: "от 30 BYN",
     updatedAt: null
-  }
+  },
 
   {
     id: "exhibition-2026-04-19-001",
@@ -107,7 +110,8 @@ export const EVENTS_SEED = [
     address: "ул. Козлова, 3",
     lat: 53.9085,
     lng: 27.5762,
-    description: "Живописная выставка о Минске: от довоенных улиц до современного города. Живопись, графика, авторские зарисовки. 0+.",
+    description:
+      "Живописная выставка о Минске: от довоенных улиц до современного города. Живопись, графика, авторские зарисовки. 0+.",
     url: "https://example.com/minsk-city-on-canvas",
     sources: ["example.com"],
     sourceType: "manual",
@@ -118,6 +122,7 @@ export const EVENTS_SEED = [
     priceLabel: "от 10 BYN",
     updatedAt: null
   },
+
   {
     id: "exhibition-2026-04-19-002",
     title: "Фотобиеннале: Город и люди",
@@ -130,7 +135,8 @@ export const EVENTS_SEED = [
     address: "пр. Независимости, 58",
     lat: 53.9158,
     lng: 27.5963,
-    description: "Фотобиеннале уличной фотографии: Минск, Вильнюс, Варшава. 100+ работ, artist-talks и мини-лекции. 12+.",
+    description:
+      "Фотобиеннале уличной фотографии: Минск, Вильнюс, Варшава. 100+ работ, artist-talks и мини-лекции. 12+.",
     url: "https://example.com/photo-biennale-city-and-people",
     sources: ["example.com"],
     sourceType: "manual",
@@ -141,6 +147,7 @@ export const EVENTS_SEED = [
     priceLabel: "вход свободный",
     updatedAt: null
   },
+
   {
     id: "festival-2026-04-19-001",
     title: "ULIСA: уличный арт-фестиваль",
@@ -153,7 +160,8 @@ export const EVENTS_SEED = [
     address: "пр. Победителей, 109",
     lat: 53.9442,
     lng: 27.5141,
-    description: "Граффити, стрит-арт, музыка и маркет локальных брендов. Живые рисовки, лекции о городской культуре, DJ-сеты вечером.",
+    description:
+      "Граффити, стрит-арт, музыка и маркет локальных брендов. Живые рисовки, лекции о городской культуре, DJ-сеты вечером.",
     url: "https://example.com/ulitsa-street-art-fest",
     sources: ["example.com"],
     sourceType: "manual",
@@ -164,6 +172,7 @@ export const EVENTS_SEED = [
     priceLabel: "вход свободный",
     updatedAt: null
   },
+
   {
     id: "festival-2026-04-19-002",
     title: "Фест \"Local Food Weekend\"",
@@ -176,7 +185,8 @@ export const EVENTS_SEED = [
     address: "ул. Веры Хоружей, 8",
     lat: 53.9151,
     lng: 27.5820,
-    description: "Фестиваль уличной еды и крафтовых продуктов: локальные фермеры, авторские бургеры, кофе, фуд-зона для вегетарианцев. Живая музыка днём.",
+    description:
+      "Фестиваль уличной еды и крафтовых продуктов: локальные фермеры, авторские бургеры, кофе, фуд-зона для вегетарианцев. Живая музыка днём.",
     url: "https://example.com/local-food-weekend",
     sources: ["example.com"],
     sourceType: "manual",
@@ -187,6 +197,7 @@ export const EVENTS_SEED = [
     priceLabel: "вход свободный, еда отдельно",
     updatedAt: null
   },
+
   {
     id: "livemusic-2026-04-19-001",
     title: "Sunday Jazz Evening",
@@ -199,7 +210,8 @@ export const EVENTS_SEED = [
     address: "ул. Карла Маркса, 21",
     lat: 53.9019,
     lng: 27.5599,
-    description: "Вечер живого джаза: трио фортепиано–контрабас–саксофон. Стандарты и авторские композиции. Бронирование столиков обязательно.",
+    description:
+      "Вечер живого джаза: трио фортепиано–контрабас–саксофон. Стандарты и авторские композиции. Бронирование столиков обязательно.",
     url: "https://example.com/sunday-jazz-evening",
     sources: ["example.com"],
     sourceType: "manual",
@@ -210,6 +222,7 @@ export const EVENTS_SEED = [
     priceLabel: "депозит от 20 BYN",
     updatedAt: null
   },
+
   {
     id: "livemusic-2026-04-19-002",
     title: "Acoustic Night: Indie Covers",
@@ -222,7 +235,8 @@ export const EVENTS_SEED = [
     address: "ул. Зыбицкая, 4",
     lat: 53.9012,
     lng: 27.5531,
-    description: "Акустический вечер: каверы на Arctic Monkeys, The Strokes, Radiohead и белорусские инди-группы. Небольшой зал, камерная атмосфера.",
+    description:
+      "Акустический вечер: каверы на Arctic Monkeys, The Strokes, Radiohead и белорусские инди-группы. Небольшой зал, камерная атмосфера.",
     url: "https://example.com/acoustic-night-indie-covers",
     sources: ["example.com"],
     sourceType: "manual",
