@@ -1,0 +1,23 @@
+{
+  id: "festival-2026-04-18-001",
+  title: "Япония.Фест",
+  category: "festival",
+  subcategory: null,
+  date: "2026-04-18",
+  dateLabel: "18 апреля",
+  time: "10:00–21:00",
+  venue: "ТЦ Океан",
+  address: "пр. Дзержинского, 3Б",
+  lat: 53.8715,
+  lng: 27.4897,
+  description: "Масштабный фестиваль японской культуры...",
+  url: "https://japanfest.by/",
+  sources: ["japanfest.by", "bycard.by"],
+  sourceType: "manual",
+  city: "Минск",
+  district: null,
+  tags: [],
+  isFree: false,
+  priceLabel: null,
+  updatedAt: null
+}
